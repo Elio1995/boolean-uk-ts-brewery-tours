@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // import { getBreweriesByState } from "../breweryDbClient";
-import getBreweriesByState from "../breweryDbClient";
+import { getBreweriesByState } from "../breweryDbClient";
 
 import BreweriesList from "./BreweriesList";
 

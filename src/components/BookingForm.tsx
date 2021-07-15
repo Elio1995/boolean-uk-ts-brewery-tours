@@ -1,31 +1,29 @@
-import React from 'react'
-
-
+import React, { SyntheticEvent } from "react";
 
 type BookingFormProps = {
-form: {
-  firstName: string
-  lastName: string
-  date: number
-  peopleCount: number
-  time: number
-}
-updateForm: ()=> void
-handleSubmit: ()=>void
-}
+  form: {
+    firstName: string;
+    lastName: string;
+    date: string;
+    peopleCount: string;
+    time: string;
+  };
+  updateForm: (e: SyntheticEvent) => void;
+  handleSubmit: () => void;
+};
 
 export default function BookingForm(props: BookingFormProps) {
-
- const {form : { firstName, lastName, date, peopleCount, time },
-  updateForm,
-  handleSubmit} = props;
-
+  const {
+    form: { firstName, lastName, date, peopleCount, time },
+    updateForm,
+    handleSubmit,
+  } = props;
 
   return (
     <section className="booking-form">
       <h3>Book a tour:</h3>
       <form
-        onSubmit={e => {
+        onSubmit={(e) => {
           e.preventDefault();
           handleSubmit();
         }}
